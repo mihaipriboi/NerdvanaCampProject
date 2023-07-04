@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Action<float, float> OnShockwave;
+
     private Rigidbody2D rb;
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
@@ -18,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float holdJumpForce = 2f;
     [SerializeField] private float maxJumpTime = 0.75f;
     [SerializeField] private float dropForce = 1.0f;
+    [SerializeField] private AudioSource audioSource;
 
 
     private float dirX = 0;
@@ -62,7 +66,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if (IsObstacleInFront())
             {
-                Debug.Log("acaca");
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
             else
@@ -103,10 +106,18 @@ public class PlayerMovement : MonoBehaviour
         // Make on S drop
         if(Input.GetKeyDown(KeyCode.S) && !IsGrounded())
         {
+            isDropping = true;
+            audioSource.Play();
             rb.AddForce(new Vector2(0, -dropForce), ForceMode2D.Impulse);
         }
 
         UpdateAnimationState();
+
+        if (isDropping && IsGrounded())
+        {
+            OnShockwave?.Invoke(10, 0.5f);
+            isDropping = false;
+        }
     }
 
     private IEnumerator Dash()
