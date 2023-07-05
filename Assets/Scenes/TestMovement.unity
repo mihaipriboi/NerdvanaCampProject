@@ -573,7 +573,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.15012318, g: 0.7830189, b: 0.12114626, a: 1}
+  m_Color: {r: 0.043572422, g: 0.6037736, b: 0.019366283, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1143,7 +1143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9043397791964375690, guid: e3d13223e0360b846942f3648097ce69, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.940184
+      value: 9.940184
       objectReference: {fileID: 0}
     - target: {fileID: 9043397791964375690, guid: e3d13223e0360b846942f3648097ce69, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1215,7 +1215,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.45660377, g: 0.8599966, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1365,5 +1365,6 @@ MonoBehaviour:
   maxJumpTime: 0.75
   dropForce: 1
   shockwaveSpeed: 15
+  shockwaveStartDist: 3
   audioSource: {fileID: 0}
   flippedTranslate: 2.5
