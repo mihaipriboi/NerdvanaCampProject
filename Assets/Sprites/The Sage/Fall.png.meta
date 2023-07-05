@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x215_0
+      name: Fall_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 046a07ff4e580764ab689993f2fc222b
-      internalID: -146494919
+      spriteID: b2b910652eca5b147a73d4b165df6d09
+      internalID: 1493079840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x215_1
+      name: Fall_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcd54b979cbae8847a653156fb107a8b
-      internalID: -1765055842
+      spriteID: 54fa17e3fecfed44eb8e0d92ddd1b44b
+      internalID: -164796843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x215_2
+      name: Fall_2
       rect:
         serializedVersion: 2
         x: 104
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a674f6997731404982e8e59fe8ed5ef
-      internalID: 1696607307
+      spriteID: e54b43a35ca93754daa56dc15b97e3fa
+      internalID: 363680055
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x215_3
+      name: Fall_3
       rect:
         serializedVersion: 2
         x: 156
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43440b6620b79cd48ba93b2a3d30e7e8
-      internalID: 741286413
+      spriteID: 0625a490783b88c44b7732656053534c
+      internalID: 1631551301
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x215_0: -146494919
-      sage 52x215_1: -1765055842
-      sage 52x215_2: 1696607307
-      sage 52x215_3: 741286413
+      Fall_0: 1493079840
+      Fall_1: -164796843
+      Fall_2: 363680055
+      Fall_3: 1631551301
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -110,43 +110,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x2112_0
+      name: Damage_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dc84aa77c8e88146a6635126e816fdc
-      internalID: -615018120
+      spriteID: 505086448631021459996f6ce24e76f2
+      internalID: 1007498926
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2112_1
+      name: Damage_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4310e6f97b752a4588e70fa022ba4be
-      internalID: -1811167436
+      spriteID: 3897fbb67baf1b646ad07b022f31fee2
+      internalID: -1443796340
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x2112_0: -615018120
-      sage 52x2112_1: -1811167436
+      Damage_0: 1007498926
+      Damage_1: -1443796340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

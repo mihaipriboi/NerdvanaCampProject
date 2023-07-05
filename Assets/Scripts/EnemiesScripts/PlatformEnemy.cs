@@ -11,10 +11,9 @@ public class PlatformEnemy : MonoBehaviour
     public float flippedTranslate;
     public Animator animator;
     public Rigidbody2D enemy;
-    static public bool attack = false;
+    public bool attack;
+    public int direction;
 
-
-    private int direction;
     private bool move = false;
 
     private bool flipped;
@@ -25,25 +24,12 @@ public class PlatformEnemy : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow) && !turn)
+        /*if (Input.GetKey(KeyCode.DownArrow) && !turn)
         {
-           // Debug.Log("roiwri");
             attack = true;
         }
 
-        if (attack == false && turn == false )
-        {
-            //.ResetTrigger("Attack");
-            animator.SetInteger("State", 1);
-            move = true;
-        }
-        if ( attack == true )
-        {
-            //Debug.Log("mda");
-            StartCoroutine(StopAndAttack(2.5f));
-        }
-
-        if(Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             direction = 1;
         }
@@ -53,19 +39,28 @@ public class PlatformEnemy : MonoBehaviour
             animator.SetInteger("State", 0);
             enemy.velocity = Vector2.zero;
 
+        }*/
+
+        if (turn == true)
+            animator.SetInteger("State", 0);
+
+        if (attack == false && turn == false )
+        {
+            animator.SetInteger("State", 1);
+            move = true;
+        }
+        if ( attack == true )
+        {
+            StartCoroutine(StopAndAttack(1.2f));
         }
 
-        //Debug.Log(direction);
-
-        if( direction == 1 && enemy.velocity == Vector2.zero && move && !attack )
+        if( direction == 1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
         {
-            //Debug.Log("stop");
             animator.SetInteger("State", 1);
             enemy.velocity = Vector2.right * speed;
         }
-        else if( direction == -1 && enemy.velocity == Vector2.zero && move && !attack)
+        else if( direction == -1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
         {
-            //Debug.Log("stop");
             animator.SetInteger("State", 1);
             enemy.velocity = Vector2.left * speed;
         }
@@ -74,43 +69,32 @@ public class PlatformEnemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("Triggered");
-        move = false;
         turn = true;
-        enemy.velocity = Vector2.zero;
-        animator.SetInteger("State", 0);
+        move = false;
 
-        StartCoroutine(Flip(2));
+        animator.SetInteger("State", 0);
+        enemy.velocity = Vector2.zero;
+
+        StartCoroutine(Flip(1));
     }
 
     IEnumerator StopAndAttack( float seconds ) {
-        Debug.Log("Attack");
         move = false;
-        Debug.Log("Attack");
         enemy.velocity = Vector2.zero;
         animator.SetTrigger("Attack");
 
         yield return new WaitForSeconds(seconds);
 
-        Debug.Log("after attack");
-
         animator.ResetTrigger("Attack");
         animator.SetInteger("State", 1);
 
-        yield return new WaitForSeconds(0.2f);
-
         attack = false;
         move = true;
-
-        Debug.Log("Done attack!");
     }
 
     IEnumerator Flip( int seconds)
     {
-        //Debug.Log("flip before wait");
         yield return new WaitForSeconds(seconds);
-
-        //Debug.Log("flip after wait");
 
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
@@ -129,7 +113,6 @@ public class PlatformEnemy : MonoBehaviour
 
         move = true;
         turn = false;
-
     }
 
 

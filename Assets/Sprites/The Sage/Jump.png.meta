@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x214_0
+      name: Jump_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0781c412b260674eb72b6fd5a7b9128
-      internalID: -937473790
+      spriteID: 68a528749eaab8d439bee9f3a0d1c723
+      internalID: -103621950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x214_1
+      name: Jump_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44bf0d9f7deca76469105cd88eb23b09
-      internalID: -1246951563
+      spriteID: fe13dd79b7305cf469b9b2616c7998a5
+      internalID: -1260662704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x214_2
+      name: Jump_2
       rect:
         serializedVersion: 2
         x: 104
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfc8424969994e645aba90fbfae0810f
-      internalID: -526372671
+      spriteID: 7aa4fd39e50024e49a9d0d58947d9b6d
+      internalID: 2094810849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x214_3
+      name: Jump_3
       rect:
         serializedVersion: 2
         x: 156
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 645c2598d4a244c4aa5d4f160ad06aef
-      internalID: 1344185417
+      spriteID: 383a3bf28ab1f0f44ab5788b0a5dd9ec
+      internalID: -1908915941
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x214_0: -937473790
-      sage 52x214_1: -1246951563
-      sage 52x214_2: -526372671
-      sage 52x214_3: 1344185417
+      Jump_0: -103621950
+      Jump_1: -1260662704
+      Jump_2: 2094810849
+      Jump_3: -1908915941
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
