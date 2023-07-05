@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+    private Animator shockAnimator;
 
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float moveSpeed = 7f;
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float holdJumpForce = 2f;
     [SerializeField] private float maxJumpTime = 0.75f;
     [SerializeField] private float dropForce = 1.0f;
-    [SerializeField] private float shockwaveSpeed = 2.0f;
+    [SerializeField] private float shockwaveSpeed = 15.0f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private float flippedTranslate = 2.5f;
 
@@ -46,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        shockAnimator = transform.Find("Shockwave").GetComponent<Animator>();
         rb.freezeRotation = true;
     }
 
@@ -108,17 +110,29 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Make on S drop
-        if(Input.GetKeyDown(KeyCode.S) && !IsGrounded())
+        if (Input.GetKeyDown(KeyCode.S) && !IsOverGround(1.5f))
         {
             isDropping = true;
-            audioSource.Play();
+            //audioSource.Play();
             rb.AddForce(new Vector2(0, -dropForce), ForceMode2D.Impulse);
         }
-
-        if ((isDropping && IsGrounded()) && rb.velocity.y >= shockwaveSpeed)
+        else if (!Input.GetKey(KeyCode.S) && isDropping)
         {
-            OnShockwave?.Invoke(10, 0.5f);
             isDropping = false;
+        }
+
+        if ((isDropping && IsOverGround(1.5f)) && Math.Abs(rb.velocity.y) >= shockwaveSpeed)
+        {
+            //OnShockwave?.Invoke(10, 0.5f);
+            anim.SetTrigger("Down");
+            shockAnimator.SetTrigger("Shock");
+            Debug.Log("Shockwave!");
+            isDropping = false;
+        }
+        else
+        {
+            anim.ResetTrigger("Down");
+            shockAnimator.ResetTrigger("Shock");
         }
 
         UpdateAnimationState();
@@ -181,6 +195,11 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround).collider != null;
+    }
+
+    private bool IsOverGround(float dist)
+    {
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, dist, jumpableGround).collider != null;
     }
 
     private bool IsObstacleInFront()

@@ -166,7 +166,7 @@ MonoBehaviour:
   holdJumpForce: 4.5
   maxJumpTime: 0.15
   dropForce: 5
-  shockwaveSpeed: 2
+  shockwaveSpeed: 15
   audioSource: {fileID: 0}
   flippedTranslate: 2.5
 --- !u!50 &3629581472324218102
