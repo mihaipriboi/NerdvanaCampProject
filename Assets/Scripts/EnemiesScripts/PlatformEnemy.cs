@@ -7,6 +7,7 @@ public class PlatformEnemy : MonoBehaviour
 {
 
     public float speed;
+    public float flippedTranslate;
     public Animator animator;
     public Rigidbody2D enemy;
     static public bool attack = false;
@@ -15,7 +16,7 @@ public class PlatformEnemy : MonoBehaviour
     private int direction;
     private bool move = false;
 
-    private bool flippepd;
+    private bool flipped;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -110,11 +111,11 @@ public class PlatformEnemy : MonoBehaviour
 
         if (direction == 1)
         {
-            enemy.transform.position = enemy.transform.position + Vector3.left * 4.5f;
+            enemy.transform.position = enemy.transform.position + Vector3.left * flippedTranslate;
         }
         else
         {
-            enemy.transform.position = enemy.transform.position + Vector3.right * 4.5f;
+            enemy.transform.position = enemy.transform.position + Vector3.right * flippedTranslate;
         }
 
         direction *= -1;
