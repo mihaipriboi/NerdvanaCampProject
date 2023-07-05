@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dropForce = 1.0f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private float flippedTranslate = 2.5f;
+    [SerializeField] private Animator animator;
 
 
     private float dirX = 0;
