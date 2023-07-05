@@ -57,7 +57,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: attack 1 0
+  m_Name: attack 1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -228,7 +228,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: attack 4 Slice attack 0
+  m_Name: attack 4 Slice attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -376,7 +376,7 @@ AnimatorController:
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 0
+    m_DefaultBool: 1
     m_Controller: {fileID: 0}
   - m_Name: IsHit
     m_Type: 9
@@ -482,7 +482,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: attack 2 0
+  m_Name: attack 2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -564,7 +564,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: attack 3 cross slice 0
+  m_Name: attack 3 cross slice
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
