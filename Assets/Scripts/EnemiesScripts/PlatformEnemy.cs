@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -17,18 +18,20 @@ public class PlatformEnemy : MonoBehaviour
     private bool move = false;
 
     private bool flipped;
+    private bool turn = false;
     void Start()
     {
         animator = GetComponent<Animator>();
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) && !turn)
         {
+           // Debug.Log("roiwri");
             attack = true;
         }
 
-        if (attack == false)
+        if (attack == false && turn == false )
         {
             //.ResetTrigger("Attack");
             animator.SetInteger("State", 1);
@@ -36,7 +39,8 @@ public class PlatformEnemy : MonoBehaviour
         }
         if ( attack == true )
         {
-            StopAndAttack();
+            //Debug.Log("mda");
+            StartCoroutine(StopAndAttack(2.5f));
         }
 
         if(Input.GetKey(KeyCode.RightArrow))
@@ -51,60 +55,63 @@ public class PlatformEnemy : MonoBehaviour
 
         }
 
-        Debug.Log(direction);
+        //Debug.Log(direction);
 
-        if( direction == 1 && enemy.velocity == Vector2.zero && move )
+        if( direction == 1 && enemy.velocity == Vector2.zero && move && !attack )
         {
+            //Debug.Log("stop");
             animator.SetInteger("State", 1);
             enemy.velocity = Vector2.right * speed;
         }
-        else if( direction == -1 && enemy.velocity == Vector2.zero && move )
+        else if( direction == -1 && enemy.velocity == Vector2.zero && move && !attack)
         {
+            //Debug.Log("stop");
             animator.SetInteger("State", 1);
             enemy.velocity = Vector2.left * speed;
         }
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        //Debug.Log("Triggered");
+        move = false;
+        turn = true;
         enemy.velocity = Vector2.zero;
         animator.SetInteger("State", 0);
 
-        StartCoroutine(waiter(20));
-
-        Flip();
+        StartCoroutine(Flip(2));
     }
 
-    void StopAndAttack()
-    {
+    IEnumerator StopAndAttack( float seconds ) {
+        Debug.Log("Attack");
         move = false;
+        Debug.Log("Attack");
         enemy.velocity = Vector2.zero;
-        animator.SetInteger("State", 0);
         animator.SetTrigger("Attack");
 
-        StartCoroutine(waiter(60));
-
-        attack = false;
-        //animator.ResetTrigger("Attack");
-    }
-
-    IEnumerator waiter( int seconds ) {
-        //Print the time of when the function is first called.
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-
-        //yield on a new YieldInstruction that waits for 5 seconds.
         yield return new WaitForSeconds(seconds);
 
-        //After we have waited 5 seconds print the time again.
-        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        Debug.Log("after attack");
+
+        animator.ResetTrigger("Attack");
+        animator.SetInteger("State", 1);
+
+        yield return new WaitForSeconds(0.2f);
+
+        attack = false;
+        move = true;
+
+        Debug.Log("Done attack!");
     }
 
-    void Flip()
+    IEnumerator Flip( int seconds)
     {
-        // Switch the way the player is labelled as facing
+        //Debug.Log("flip before wait");
+        yield return new WaitForSeconds(seconds);
 
-        // Multiply the player's x local scale by -1
+        //Debug.Log("flip after wait");
+
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
@@ -120,7 +127,10 @@ public class PlatformEnemy : MonoBehaviour
 
         direction *= -1;
 
+        move = true;
+        turn = false;
+
     }
 
-    
+
 }
