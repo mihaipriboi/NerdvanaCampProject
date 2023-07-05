@@ -143,6 +143,7 @@ public class PlayerMovement : MonoBehaviour
             if (isFlipped)
             {
                 sprite.transform.position += Vector3.right * flippedTranslate;
+                coll.offset = new Vector2(-coll.offset.x, coll.offset.y);
             }
             isFlipped = false;
         }
@@ -153,6 +154,7 @@ public class PlayerMovement : MonoBehaviour
             if(!isFlipped) 
             {
                 sprite.transform.position += Vector3.left * flippedTranslate;
+                coll.offset = new Vector2(-coll.offset.x, coll.offset.y);
             }
             isFlipped = true;
         }
