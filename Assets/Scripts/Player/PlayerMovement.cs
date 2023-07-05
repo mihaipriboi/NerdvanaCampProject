@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxJumpTime = 0.75f;
     [SerializeField] private float dropForce = 1.0f;
     [SerializeField] private float shockwaveSpeed = 15.0f;
+    [SerializeField] private float shockwaveStartDist = 3.0f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private float flippedTranslate = 2.5f;
 
@@ -110,7 +111,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Make on S drop
-        if (Input.GetKeyDown(KeyCode.S) && !IsOverGround(1.5f))
+        if (Input.GetKeyDown(KeyCode.S) && !IsOverGround(shockwaveStartDist))
         {
             isDropping = true;
             //audioSource.Play();
@@ -121,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
             isDropping = false;
         }
 
-        if ((isDropping && IsOverGround(1.5f)) && Math.Abs(rb.velocity.y) >= shockwaveSpeed)
+        if ((isDropping && IsOverGround(shockwaveStartDist)) && Math.Abs(rb.velocity.y) >= shockwaveSpeed)
         {
             //OnShockwave?.Invoke(10, 0.5f);
             anim.SetTrigger("Down");
