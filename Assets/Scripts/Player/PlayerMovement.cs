@@ -156,21 +156,11 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.running;
             sprite.flipX = false;
-            if (isFlipped)
-            {
-                sprite.transform.position += Vector3.right * flippedTranslate;
-            }
-            isFlipped = false;
         }
         else if (dirX < 0f)
         {
             state = MovementState.running;
             sprite.flipX = true;
-            if(!isFlipped) 
-            {
-                sprite.transform.position += Vector3.left * flippedTranslate;
-            }
-            isFlipped = true;
         }
         else
         {
