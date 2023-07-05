@@ -11,10 +11,9 @@ public class PlatformEnemy : MonoBehaviour
     public float flippedTranslate;
     public Animator animator;
     public Rigidbody2D enemy;
-    static public bool attack = false;
+    public bool attack;
+    public int direction;
 
-
-    private int direction;
     private bool move = false;
 
     private bool flipped;
@@ -25,7 +24,7 @@ public class PlatformEnemy : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow) && !turn)
+        /*if (Input.GetKey(KeyCode.DownArrow) && !turn)
         {
             attack = true;
         }
@@ -40,7 +39,7 @@ public class PlatformEnemy : MonoBehaviour
             animator.SetInteger("State", 0);
             enemy.velocity = Vector2.zero;
 
-        }
+        }*/
 
         if (turn == true)
             animator.SetInteger("State", 0);
