@@ -110,190 +110,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x211_0
+      name: Idle_Dynamic_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f83e0567e72d274aa051602e2fa8f02
-      internalID: 1570822666
+      spriteID: f63d23abffaedf640a7957cecb66d5ba
+      internalID: -333384544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x211_1
+      name: Idle_Dynamic_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9ef54201c67c3a4c950fa6d79c170b0
-      internalID: -2118882205
+      spriteID: b889d7940c9c15a4da38b64fb9559262
+      internalID: 1468040141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x211_2
+      name: Idle_Dynamic_2
       rect:
         serializedVersion: 2
         x: 104
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3e0c07d99ec16f4aaf31238e7f06a29
-      internalID: -1803330689
+      spriteID: de21a0b482461c74da39fb6c7e8d258e
+      internalID: 595678695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x211_3
+      name: Idle_Dynamic_3
       rect:
         serializedVersion: 2
         x: 156
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3d83dbb09afd8b4fab4f7a3f235e0c3
-      internalID: 1209054920
+      spriteID: 9cf9013e0391c4543925974ebe603540
+      internalID: -2096286143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x211_4
+      name: Idle_Dynamic_4
       rect:
         serializedVersion: 2
         x: 208
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e7b7ed93a0aab74c8fd3f192ed7e4a4
-      internalID: -124927832
+      spriteID: 17d1ba46753484a44bf89f92b40c73bd
+      internalID: 1458370453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x211_5
+      name: Idle_Dynamic_5
       rect:
         serializedVersion: 2
         x: 260
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a917a749bd190d040b34c6ae31b1b7f1
-      internalID: 789605394
+      spriteID: 83ff92334f5e41540a50d30d9053b95d
+      internalID: 1169885157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x211_6
+      name: Idle_Dynamic_6
       rect:
         serializedVersion: 2
         x: 312
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d3fab570016f0a43b378ae342028034
-      internalID: 521248114
+      spriteID: 00018a1f847280f44a67276413d7a7f7
+      internalID: -1728457811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x211_7
+      name: Idle_Dynamic_7
       rect:
         serializedVersion: 2
         x: 364
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b831a8d278c9b35428488c7e9b30b108
-      internalID: 5371739
+      spriteID: 1cbe6035029b64b4c84916080a3e24cd
+      internalID: 804454881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x211_8
+      name: Idle_Dynamic_8
       rect:
         serializedVersion: 2
         x: 416
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b2253e66e3fee1489dacf2574b710ff
-      internalID: 661340944
+      spriteID: 91fc3a9b02527234a9d6ab790a3e9b6f
+      internalID: 520513631
       vertices: []
       indices: 
       edges: []
@@ -309,15 +309,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x211_0: 1570822666
-      sage 52x211_1: -2118882205
-      sage 52x211_2: -1803330689
-      sage 52x211_3: 1209054920
-      sage 52x211_4: -124927832
-      sage 52x211_5: 789605394
-      sage 52x211_6: 521248114
-      sage 52x211_7: 5371739
-      sage 52x211_8: 661340944
+      Idle_Dynamic_0: -333384544
+      Idle_Dynamic_1: 1468040141
+      Idle_Dynamic_2: 595678695
+      Idle_Dynamic_3: -2096286143
+      Idle_Dynamic_4: 1458370453
+      Idle_Dynamic_5: 1169885157
+      Idle_Dynamic_6: -1728457811
+      Idle_Dynamic_7: 804454881
+      Idle_Dynamic_8: 520513631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

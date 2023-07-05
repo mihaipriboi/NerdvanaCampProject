@@ -110,169 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x213_0
+      name: Running_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 044d6391312f8ab43b614d17bc4ff9b4
-      internalID: -1555671553
+      spriteID: ee018b6fa6e284a45aee18477ec9981d
+      internalID: 111218354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x213_1
+      name: Running_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eb1a3a1a519bc34daaf419da7e6bb76
-      internalID: -2048060465
+      spriteID: 26cb946a6712d1c40be7dcbe99e7285f
+      internalID: 1657785637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x213_2
+      name: Running_2
       rect:
         serializedVersion: 2
         x: 104
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d629e3e0f8c31940bdfbb497e9afcc0
-      internalID: 1600531842
+      spriteID: 9bbbb69ad547f424a9c431e491b46909
+      internalID: -1967351357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x213_3
+      name: Running_3
       rect:
         serializedVersion: 2
         x: 156
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1410e89c13d55af4e8e4ee478784cc8d
-      internalID: -66631134
+      spriteID: 7e7392c5ad202a648986889746add8d2
+      internalID: 617991701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x213_4
+      name: Running_4
       rect:
         serializedVersion: 2
         x: 208
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da23edafd8e3dcd4cb7a183438adff5f
-      internalID: 223864107
+      spriteID: 05b970350589f1b4db6127f24a1889a5
+      internalID: 902739453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x213_5
+      name: Running_5
       rect:
         serializedVersion: 2
         x: 260
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e83c87c34642524e94cb091fa7bda87
-      internalID: -131477939
+      spriteID: d5cbbf0593f846a48bfd5644f47e5f44
+      internalID: -299122153
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x213_6
+      name: Running_6
       rect:
         serializedVersion: 2
         x: 312
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c1abb8e2668a894dbaa21bc881c1515
-      internalID: -794153990
+      spriteID: 406890afdf390ee4b91970be50203432
+      internalID: -1998476205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x213_7
+      name: Running_7
       rect:
         serializedVersion: 2
         x: 364
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 515fff58d65b4db4cb429353b23c17f4
-      internalID: -841723749
+      spriteID: f4884eb233bd53744a0658ac020497be
+      internalID: -1438985372
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x213_0: -1555671553
-      sage 52x213_1: -2048060465
-      sage 52x213_2: 1600531842
-      sage 52x213_3: -66631134
-      sage 52x213_4: 223864107
-      sage 52x213_5: -131477939
-      sage 52x213_6: -794153990
-      sage 52x213_7: -841723749
+      Running_0: 111218354
+      Running_1: 1657785637
+      Running_2: -1967351357
+      Running_3: 617991701
+      Running_4: 902739453
+      Running_5: -299122153
+      Running_6: -1998476205
+      Running_7: -1438985372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x2110_0
+      name: Shield_Cycle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89a62249aec054f4589f387e8a252a8d
-      internalID: -971009333
+      spriteID: 97a30ca51967a8840bf6cb0dc6854350
+      internalID: -1309816984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2110_1
+      name: Shield_Cycle_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45cb2cacdcd7f2e4a99acb741a0dd15d
-      internalID: -1285891070
+      spriteID: 2dd4315644bae9c41b1d21354979e32a
+      internalID: -2019844497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2110_2
+      name: Shield_Cycle_2
       rect:
         serializedVersion: 2
         x: 104
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bccd679fd4ad1244b93f02a060906a13
-      internalID: -418093429
+      spriteID: 360ccf721c4b86d4897bc57b6e4ec0c2
+      internalID: -1711826696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2110_3
+      name: Shield_Cycle_3
       rect:
         serializedVersion: 2
         x: 156
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3caec9f29110f624b9b68cd8fe637b27
-      internalID: 553443766
+      spriteID: 16a2987957de6f842ac89fe6011a5413
+      internalID: -1409973822
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x2110_0: -971009333
-      sage 52x2110_1: -1285891070
-      sage 52x2110_2: -418093429
-      sage 52x2110_3: 553443766
+      Shield_Cycle_0: -1309816984
+      Shield_Cycle_1: -2019844497
+      Shield_Cycle_2: -1711826696
+      Shield_Cycle_3: -1409973822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

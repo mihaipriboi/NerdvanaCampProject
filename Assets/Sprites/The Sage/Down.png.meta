@@ -110,295 +110,295 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x2111_0
+      name: Down_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c58f1bb97ae3394438613fdee2c0679f
-      internalID: -1606737870
+      spriteID: 5073d5e985cad2543878e7661ba86ddc
+      internalID: -844038721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_1
+      name: Down_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6394632b5bf777340ab1877b41831505
-      internalID: 1587532407
+      spriteID: 75c87046e12e7984eb9a39de0a2fb5d2
+      internalID: -1615882717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_2
+      name: Down_2
       rect:
         serializedVersion: 2
         x: 104
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd18321794608314f93c1aeacba56582
-      internalID: -2106131755
+      spriteID: 54774b121fc81114886c5704671cbdae
+      internalID: -1813758930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_3
+      name: Down_3
       rect:
         serializedVersion: 2
         x: 156
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 376ff808f9655834d92fcce49c62ea98
-      internalID: -1215131528
+      spriteID: f5d01bdedfd4a7c4eabd97ab2b634f50
+      internalID: -369942102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_4
+      name: Down_4
       rect:
         serializedVersion: 2
         x: 208
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed267a1247d68884f9aa6919e86ef826
-      internalID: 1374692383
+      spriteID: e1051e99ef70917489e0fcd77cffe739
+      internalID: -1369973689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_5
+      name: Down_5
       rect:
         serializedVersion: 2
         x: 260
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aef5c53b956d2f046ba2e8a0fc7a7e21
-      internalID: 418039034
+      spriteID: 776869a68b480ce40903267f614ea27f
+      internalID: 1889743437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_6
+      name: Down_6
       rect:
         serializedVersion: 2
         x: 312
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1e8ba3fdd913db4ea6fdf6cdad72505
-      internalID: -1793192294
+      spriteID: bb8369815adde9b458a9b2aaa9457901
+      internalID: -698683343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_7
+      name: Down_7
       rect:
         serializedVersion: 2
         x: 364
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62109f0563c9e154bb2bc31980ceeffd
-      internalID: -1676486929
+      spriteID: 0b212dd0471958a47ba4d7485c609b79
+      internalID: 1511835490
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_8
+      name: Down_8
       rect:
         serializedVersion: 2
         x: 416
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7869a628d5b76c340bd9ee5d1b6c1615
-      internalID: 1135550295
+      spriteID: 8e82d121e5a95274dad1abf29eddec27
+      internalID: -302145794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_9
+      name: Down_9
       rect:
         serializedVersion: 2
         x: 468
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfbbbdf31454f4444904e233d9b3dd3e
-      internalID: -1587430185
+      spriteID: 634be75617930404a9474d6023b899a0
+      internalID: 1234853751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_10
+      name: Down_10
       rect:
         serializedVersion: 2
         x: 520
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac096bcdb03f2af4da4cde8b0a93e97d
-      internalID: 1969921816
+      spriteID: 713735fbc80cfa741aa58836f70a767a
+      internalID: -309455251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_11
+      name: Down_11
       rect:
         serializedVersion: 2
         x: 572
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 579843fd2982bbd43b1fb587ba69520d
-      internalID: -1539559281
+      spriteID: ecf9d0c44c08fad4692646c2bf79acd1
+      internalID: -692057577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_12
+      name: Down_12
       rect:
         serializedVersion: 2
         x: 624
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71690d21ba936214e813cd13e55283e0
-      internalID: 467719272
+      spriteID: cb38a707e07ef44479a998d0706884aa
+      internalID: 1278310958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2111_13
+      name: Down_13
       rect:
         serializedVersion: 2
         x: 676
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a7ff09a0087977419eca7f949ba1ba7
-      internalID: -2088883003
+      spriteID: 8cd464b5906fede40937eddcc929e345
+      internalID: -1409386875
       vertices: []
       indices: 
       edges: []
@@ -414,20 +414,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x2111_0: -1606737870
-      sage 52x2111_1: 1587532407
-      sage 52x2111_10: 1969921816
-      sage 52x2111_11: -1539559281
-      sage 52x2111_12: 467719272
-      sage 52x2111_13: -2088883003
-      sage 52x2111_2: -2106131755
-      sage 52x2111_3: -1215131528
-      sage 52x2111_4: 1374692383
-      sage 52x2111_5: 418039034
-      sage 52x2111_6: -1793192294
-      sage 52x2111_7: -1676486929
-      sage 52x2111_8: 1135550295
-      sage 52x2111_9: -1587430185
+      Down_0: -844038721
+      Down_1: -1615882717
+      Down_10: -309455251
+      Down_11: -692057577
+      Down_12: 1278310958
+      Down_13: -1409386875
+      Down_2: -1813758930
+      Down_3: -369942102
+      Down_4: -1369973689
+      Down_5: 1889743437
+      Down_6: -698683343
+      Down_7: 1511835490
+      Down_8: -302145794
+      Down_9: 1234853751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

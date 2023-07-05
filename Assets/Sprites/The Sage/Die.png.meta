@@ -110,169 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x2113_0
+      name: Die_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 682bf1a73ec1fcc44b460df4a6770998
-      internalID: -50295629
+      spriteID: f2f1200a32dd2ca45b0bf503a8cb66b4
+      internalID: 1439657211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2113_1
+      name: Die_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b2ba140bbb3a914badb31983566d739
-      internalID: -430949286
+      spriteID: 5f56e8ec1415191418fa7a125493ca9c
+      internalID: 155104376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2113_2
+      name: Die_2
       rect:
         serializedVersion: 2
         x: 104
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b539164bb47df6e47b6177dcfa5a757f
-      internalID: -645005704
+      spriteID: 26d83544b9a2e6f47a09e1e3cbfc6266
+      internalID: 538857214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2113_3
+      name: Die_3
       rect:
         serializedVersion: 2
         x: 156
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9def56cb506ae374c9b66437920a978e
-      internalID: -542661563
+      spriteID: 85352d93e6452ce44ba0abe238efa945
+      internalID: -328394719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2113_4
+      name: Die_4
       rect:
         serializedVersion: 2
         x: 208
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 834b15835f4fc614398c05778cc1855c
-      internalID: -1282261414
+      spriteID: 917154e8ff936df458ad0a1ddee02412
+      internalID: 1361967462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2113_5
+      name: Die_5
       rect:
         serializedVersion: 2
         x: 260
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03747f62934be53448ed7a16a395ea8b
-      internalID: -686064825
+      spriteID: a2e5af6960bb450489225403ab2b4464
+      internalID: 618647654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2113_6
+      name: Die_6
       rect:
         serializedVersion: 2
         x: 312
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2cf819c8e489584c87f6bc93503d594
-      internalID: 1541501989
+      spriteID: 8064270d47fc3f043a76c64217fc2e88
+      internalID: -1982107790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x2113_7
+      name: Die_7
       rect:
         serializedVersion: 2
         x: 364
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 843781da2f2a36648afd5380ca3a6c08
-      internalID: 167918174
+      spriteID: e61091bb6bd1afc42b87236afc2efb9e
+      internalID: -1867175899
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x2113_0: -50295629
-      sage 52x2113_1: -430949286
-      sage 52x2113_2: -645005704
-      sage 52x2113_3: -542661563
-      sage 52x2113_4: -1282261414
-      sage 52x2113_5: -686064825
-      sage 52x2113_6: 1541501989
-      sage 52x2113_7: 167918174
+      Die_0: 1439657211
+      Die_1: 155104376
+      Die_2: 538857214
+      Die_3: -328394719
+      Die_4: 1361967462
+      Die_5: 618647654
+      Die_6: -1982107790
+      Die_7: -1867175899
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

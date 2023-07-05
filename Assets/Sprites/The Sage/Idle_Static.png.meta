@@ -110,22 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x212_0
+      name: Idle_Static_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb938d5057f6e6b4cb67f4c34aff8775
-      internalID: 1709694763
+      spriteID: ecf4b1b45634e4641aaeb835bead5205
+      internalID: 744739125
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x212_0: 1709694763
+      Idle_Static_0: 744739125
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
