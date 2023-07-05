@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  flippedTranslate: 4.5
   animator: {fileID: 91629904}
   enemy: {fileID: 91629907}
 --- !u!1 &1084856062
