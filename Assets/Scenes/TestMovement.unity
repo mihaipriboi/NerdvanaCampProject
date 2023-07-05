@@ -1141,7 +1141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e989191b0efe1404f9a5c9130f0c3d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 2076130572}
 --- !u!4 &1632980469
 Transform:
   m_ObjectHideFlags: 0
@@ -1321,3 +1321,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076130572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2317172631051364179, guid: e3d13223e0360b846942f3648097ce69, type: 3}
+  m_PrefabInstance: {fileID: 348399128}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a54fa6a9ca07ef4daf97499c7273eba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -22,9 +22,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float holdJumpForce = 2f;
     [SerializeField] private float maxJumpTime = 0.75f;
     [SerializeField] private float dropForce = 1.0f;
+    [SerializeField] private float shockwaveSpeed = 2.0f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private float flippedTranslate = 2.5f;
-    [SerializeField] private Animator animator;
 
 
     private float dirX = 0;
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isDropping = false;
     private bool isFlipped = false;
 
-    private enum MovementState { idle, running, jumping, falling, dashing }
+    private enum MovementState { idle, running, jumping, falling, damage, death, dashing, down }
 
     // Start is called before the first frame update
     private void Start()
@@ -115,13 +115,13 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(new Vector2(0, -dropForce), ForceMode2D.Impulse);
         }
 
-        UpdateAnimationState();
-
-        if (isDropping && IsGrounded())
+        if ((isDropping && IsGrounded()) && rb.velocity.y >= shockwaveSpeed)
         {
             OnShockwave?.Invoke(10, 0.5f);
             isDropping = false;
         }
+
+        UpdateAnimationState();
     }
 
     private IEnumerator Dash()
@@ -144,7 +144,6 @@ public class PlayerMovement : MonoBehaviour
             if (isFlipped)
             {
                 sprite.transform.position += Vector3.right * flippedTranslate;
-                coll.offset = new Vector2(-coll.offset.x, coll.offset.y);
             }
             isFlipped = false;
         }
@@ -155,7 +154,6 @@ public class PlayerMovement : MonoBehaviour
             if(!isFlipped) 
             {
                 sprite.transform.position += Vector3.left * flippedTranslate;
-                coll.offset = new Vector2(-coll.offset.x, coll.offset.y);
             }
             isFlipped = true;
         }
@@ -178,7 +176,7 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.dashing;
         }
 
-        anim.SetInteger("state", (int)state);
+        anim.SetInteger("State", (int)state);
     }
     private bool IsGrounded()
     {
