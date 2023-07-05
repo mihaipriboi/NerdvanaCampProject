@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+    private Animator shockAnimator;
 
     [SerializeField] private LayerMask jumpableGround;
     [SerializeField] private float moveSpeed = 7f;
@@ -22,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float holdJumpForce = 2f;
     [SerializeField] private float maxJumpTime = 0.75f;
     [SerializeField] private float dropForce = 1.0f;
+    [SerializeField] private float shockwaveSpeed = 15.0f;
+    [SerializeField] private float shockwaveStartDist = 3.0f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private float flippedTranslate = 2.5f;
 
@@ -36,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isDropping = false;
     private bool isFlipped = false;
 
-    private enum MovementState { idle, running, jumping, falling, dashing }
+    private enum MovementState { idle, running, jumping, falling, damage, death, dashing, down }
 
     // Start is called before the first frame update
     private void Start()
@@ -45,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        shockAnimator = transform.Find("Shockwave").GetComponent<Animator>();
         rb.freezeRotation = true;
     }
 
@@ -107,20 +111,32 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Make on S drop
-        if(Input.GetKeyDown(KeyCode.S) && !IsGrounded())
+        if (Input.GetKeyDown(KeyCode.S) && !IsOverGround(shockwaveStartDist))
         {
             isDropping = true;
-            audioSource.Play();
+            //audioSource.Play();
             rb.AddForce(new Vector2(0, -dropForce), ForceMode2D.Impulse);
+        }
+        else if (!Input.GetKey(KeyCode.S) && isDropping)
+        {
+            isDropping = false;
+        }
+
+        if ((isDropping && IsOverGround(shockwaveStartDist)) && Math.Abs(rb.velocity.y) >= shockwaveSpeed)
+        {
+            //OnShockwave?.Invoke(10, 0.5f);
+            anim.SetTrigger("Down");
+            shockAnimator.SetTrigger("Shock");
+            Debug.Log("Shockwave!");
+            isDropping = false;
+        }
+        else
+        {
+            anim.ResetTrigger("Down");
+            shockAnimator.ResetTrigger("Shock");
         }
 
         UpdateAnimationState();
-
-        if (isDropping && IsGrounded())
-        {
-            OnShockwave?.Invoke(10, 0.5f);
-            isDropping = false;
-        }
     }
 
     private IEnumerator Dash()
@@ -140,23 +156,11 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.running;
             sprite.flipX = false;
-            if (isFlipped)
-            {
-                sprite.transform.position += Vector3.right * flippedTranslate;
-                coll.offset = new Vector2(-coll.offset.x, coll.offset.y);
-            }
-            isFlipped = false;
         }
         else if (dirX < 0f)
         {
             state = MovementState.running;
             sprite.flipX = true;
-            if(!isFlipped) 
-            {
-                sprite.transform.position += Vector3.left * flippedTranslate;
-                coll.offset = new Vector2(-coll.offset.x, coll.offset.y);
-            }
-            isFlipped = true;
         }
         else
         {
@@ -177,11 +181,16 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.dashing;
         }
 
-        anim.SetInteger("state", (int)state);
+        anim.SetInteger("State", (int)state);
     }
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround).collider != null;
+    }
+
+    private bool IsOverGround(float dist)
+    {
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, dist, jumpableGround).collider != null;
     }
 
     private bool IsObstacleInFront()

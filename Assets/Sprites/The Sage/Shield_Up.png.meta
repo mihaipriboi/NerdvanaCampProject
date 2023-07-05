@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x218_0
+      name: Shield_PowerUp_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168cb57b8678b0046a26636f687b6adf
-      internalID: 381215293
+      spriteID: f231c6a44b84a014aaac30e9788eff6a
+      internalID: -1442747574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x218_1
+      name: Shield_PowerUp_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03556089ea1ca0d488f85d21ac9296b0
-      internalID: 1459833276
+      spriteID: 0741ac422aba22c4cb6bd0c712e65feb
+      internalID: -2019865985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x218_2
+      name: Shield_PowerUp_2
       rect:
         serializedVersion: 2
         x: 104
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0cffcc6230c24d45be5c7f55c6a195c
-      internalID: -386311608
+      spriteID: 048858a5aeedfb149a38b802b5696041
+      internalID: -522525100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x218_3
+      name: Shield_PowerUp_3
       rect:
         serializedVersion: 2
         x: 156
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f112c7e3e8e04ed4cbe2f65fa1e63e7a
-      internalID: 1735625627
+      spriteID: 6de5518dfb908314bb6777f4fde0d427
+      internalID: 327265537
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x218_0: 381215293
-      sage 52x218_1: 1459833276
-      sage 52x218_2: -386311608
-      sage 52x218_3: 1735625627
+      Shield_PowerUp_0: -1442747574
+      Shield_PowerUp_1: -2019865985
+      Shield_PowerUp_2: -522525100
+      Shield_PowerUp_3: 327265537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

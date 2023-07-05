@@ -110,85 +110,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sage 52x216_0
+      name: Dash_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd3cb5c6262bf92439b446d9a8a6cdc5
-      internalID: -416308970
+      spriteID: c2e0c1083001a0447a61312c40dd0de0
+      internalID: 1074277632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x216_1
+      name: Dash_1
       rect:
         serializedVersion: 2
         x: 52
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5dd870c48bd89a4599d4499f7ea2ae1
-      internalID: -519307792
+      spriteID: 17d6581436237d949a107f4bb5ed91ef
+      internalID: -75315080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x216_2
+      name: Dash_2
       rect:
         serializedVersion: 2
         x: 104
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fb3e90c9c1dc3d4e8aebee5e93e052b
-      internalID: -24960629
+      spriteID: a578088b8def26544ae5cf3cf96fb67c
+      internalID: 575730865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sage 52x216_3
+      name: Dash_3
       rect:
         serializedVersion: 2
         x: 156
         y: 0
         width: 52
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.298278, y: 0.3652137}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c7e00fb625e7da46815fd67d0a1970a
-      internalID: 1036085373
+      spriteID: ef32d775453d54447ab178aa0b23593f
+      internalID: -1157423367
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sage 52x216_0: -416308970
-      sage 52x216_1: -519307792
-      sage 52x216_2: -24960629
-      sage 52x216_3: 1036085373
+      Dash_0: 1074277632
+      Dash_1: -75315080
+      Dash_2: 575730865
+      Dash_3: -1157423367
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
