@@ -576,13 +576,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d48a49c56fa2441be60fe08be407e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviour: 1
+  behaviour: 0
   speed: 0
   jumpForce: 0
   leftObs: {fileID: 0}
   rightObs: {fileID: 0}
   playerToFollow: {fileID: 0}
   agroDistance: 0
+  smartLevel: 0
 --- !u!1 &1281411161
 GameObject:
   m_ObjectHideFlags: 3
