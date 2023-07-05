@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Sweep without VFX_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249aeb06de3a50046ba5d9fd9ee48105
+      internalID: -1978550224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep without VFX_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ea23d46aa018b44aa27333d4faf7b6
+      internalID: -168028221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep without VFX_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d0997fe7851cf4c9ca0fd8fdda2368
+      internalID: -1492750868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep without VFX_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6479ee9e0cb5c4fbd00850f90e0048
+      internalID: -1810459578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep without VFX_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7a300f93723204478a96e231381aae4
+      internalID: 320673685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep without VFX_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f6663b1b7576c48b4a3c5990f1123f
+      internalID: 1426772930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep without VFX_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9c98c3622b1d341b95434df9c74afc
+      internalID: -672672459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sweep without VFX_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7776ea09965a7004c925b9d7571f1e28
+      internalID: -387380261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +287,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Sweep without VFX_0: -1978550224
+      Sweep without VFX_1: -168028221
+      Sweep without VFX_2: -1492750868
+      Sweep without VFX_3: -1810459578
+      Sweep without VFX_4: 320673685
+      Sweep without VFX_5: 1426772930
+      Sweep without VFX_6: -672672459
+      Sweep without VFX_7: -387380261
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
