@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxJumpTime = 0.75f;
     [SerializeField] private float dropForce = 1.0f;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private float flippedTranslate = 2.5f;
 
 
     private float dirX = 0;
@@ -32,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     private float timeDash = 0;
 
     private bool isDropping = false;
+    private bool isFlipped = false;
 
     private enum MovementState { idle, running, jumping, falling, dashing }
 
@@ -137,11 +140,21 @@ public class PlayerMovement : MonoBehaviour
         {
             state = MovementState.running;
             sprite.flipX = false;
+            if (isFlipped)
+            {
+                sprite.transform.position += Vector3.right * flippedTranslate;
+            }
+            isFlipped = false;
         }
         else if (dirX < 0f)
         {
             state = MovementState.running;
             sprite.flipX = true;
+            if(!isFlipped) 
+            {
+                sprite.transform.position += Vector3.left * flippedTranslate;
+            }
+            isFlipped = true;
         }
         else
         {
@@ -164,7 +177,6 @@ public class PlayerMovement : MonoBehaviour
 
         anim.SetInteger("state", (int)state);
     }
-
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround).collider != null;
