@@ -38,6 +38,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isDropping = false;
     private bool isFlipped = false;
+    private bool jumpPressed;
+    private bool additionalJumpForceRequired;
+    private bool dropPressed;
 
     private enum MovementState { idle, running, jumping, falling, damage, death, dashing, down }
 
@@ -55,12 +58,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        // Modified Input
+        // Get inputs
         if (Input.GetKey(KeyCode.A))
         {
             dirX = -1;
             lastDirX = dirX;
-        }  
+        }
         else if (Input.GetKey(KeyCode.D))
         {
             dirX = 1;
@@ -69,6 +72,41 @@ public class PlayerMovement : MonoBehaviour
         else
             dirX = 0;
 
+        // Dash on Shift press
+        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && Time.time > timeDash)
+        {
+            StartCoroutine(Dash());
+        }
+
+        // Jump on W press
+        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+        {
+            jumpPressed = true;
+        }
+
+        // Apply additional force if W is held
+        if (Input.GetKey(KeyCode.W) && !IsObstacleOnTop())
+        {
+            additionalJumpForceRequired = true;
+            Debug.Log("caca");
+        }
+
+        // Make on S drop
+        if (Input.GetKeyDown(KeyCode.S) && !IsOverGround(shockwaveStartDist))
+        {
+            dropPressed = true;
+        }
+        else if (!Input.GetKey(KeyCode.S) && isDropping)
+        {
+            isDropping = false;
+        }
+
+        UpdateAnimationState();
+    }
+
+    private void FixedUpdate()
+    {
+        // Modified Input
         if (!isDashing)
         {
             if (IsObstacleInFront())
@@ -81,22 +119,14 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        // Dash on Shift press
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && Time.time > timeDash)
-        {
-            StartCoroutine(Dash());
-        }
-
-        // Jump on W press
-        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+        if (jumpPressed)
         {
             rb.velocity = new Vector2(rb.velocity.x, initialJumpForce);
             jumpTime = Time.time + maxJumpTime;
+            jumpPressed = false; // Reset after use
         }
 
-
-        // Apply additional force if W is held
-        if (Input.GetKey(KeyCode.W) && !IsObstacleOnTop())
+        if (additionalJumpForceRequired)
         {
             if (Time.time < jumpTime)
             {
@@ -108,18 +138,17 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector3(rb.velocity.x, initialJumpForce);
                 jumpTime = Time.time + maxJumpTime;
             }
+
+            additionalJumpForceRequired = false;
+            // Reset after use
         }
 
-        // Make on S drop
-        if (Input.GetKeyDown(KeyCode.S) && !IsOverGround(shockwaveStartDist))
+        if (dropPressed)
         {
             isDropping = true;
             //audioSource.Play();
             rb.AddForce(new Vector2(0, -dropForce), ForceMode2D.Impulse);
-        }
-        else if (!Input.GetKey(KeyCode.S) && isDropping)
-        {
-            isDropping = false;
+            dropPressed = false; // Reset after use
         }
 
         if ((isDropping && IsOverGround(shockwaveStartDist)) && Math.Abs(rb.velocity.y) >= shockwaveSpeed)
@@ -133,11 +162,11 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             anim.ResetTrigger("Down");
+    
             shockAnimator.ResetTrigger("Shock");
         }
-
-        UpdateAnimationState();
     }
+
 
     private IEnumerator Dash()
     {
