@@ -1115,6 +1115,10 @@ PrefabInstance:
       value: Sage
       objectReference: {fileID: 0}
     - target: {fileID: 6382345283120310442, guid: e3d13223e0360b846942f3648097ce69, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382345283120310442, guid: e3d13223e0360b846942f3648097ce69, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -333384544, guid: 3b9006f239f122a488be34e5f4fa2d66, type: 3}
