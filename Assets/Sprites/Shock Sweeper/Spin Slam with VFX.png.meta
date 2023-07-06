@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Spin Slam with VFX_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01ffb00d5d0074428450f48b8268c78
+      internalID: 832977922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin Slam with VFX_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252581be74ebfc94a9677e44b48f6329
+      internalID: 216163772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin Slam with VFX_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8353572ee333d40b1cedfa7e6e525e
+      internalID: 965957343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin Slam with VFX_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f443edb8dcf541d4a9060c0de4ee1610
+      internalID: -1904744910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin Slam with VFX_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c095fd9ce83aa3488a7fc5a263c8371
+      internalID: -2065633425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin Slam with VFX_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0e3e44462e1884f897c752439dc9d7
+      internalID: -1184465440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin Slam with VFX_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8be536c8db14964285466056c2a5088
+      internalID: -2005894334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin Slam with VFX_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 30
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9998e3ca90157d24d85d29c2a10e6233
+      internalID: 644440711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spin Slam with VFX_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 88
+        height: 30
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306e54ce0a049e244aac1372e6f0f3df
+      internalID: 1712375197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +308,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Spin Slam with VFX_0: 832977922
+      Spin Slam with VFX_1: 216163772
+      Spin Slam with VFX_2: 965957343
+      Spin Slam with VFX_3: -1904744910
+      Spin Slam with VFX_4: -2065633425
+      Spin Slam with VFX_5: -1184465440
+      Spin Slam with VFX_6: -2005894334
+      Spin Slam with VFX_7: 644440711
+      Spin Slam with VFX_8: 1712375197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

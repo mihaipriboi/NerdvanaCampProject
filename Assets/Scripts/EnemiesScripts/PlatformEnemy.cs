@@ -14,68 +14,55 @@ public class PlatformEnemy : MonoBehaviour
     public bool attack;
     public int direction;
 
-    private bool move = false;
+
+    static public bool turn = false;
 
     private bool flipped;
-    private bool turn = false;
+    private bool move = true;
+    private bool isInTurn = false;
+    private int noTurns = 0;
     void Start()
     {
         animator = GetComponent<Animator>();
+        turn = false;
+        move = true ;
+
+        noTurns = 0;
     }
     void Update()
     {
-        /*if (Input.GetKey(KeyCode.DownArrow) && !turn)
+        Debug.Log(turn);
+        if (turn == true && !isInTurn)
         {
-            attack = true;
+            isInTurn = true;
+            Debug.Log("is turn time");
+            StartCoroutine(Flip(1));
+            noTurns++;
+            Debug.Log(noTurns);
+            //animator.SetInteger("State", 0);
         }
 
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            direction = 1;
-        }
-
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            animator.SetInteger("State", 0);
-            enemy.velocity = Vector2.zero;
-
-        }*/
-
-        if (turn == true)
-            animator.SetInteger("State", 0);
-
-        if (attack == false && turn == false )
+        if (attack == false && turn == false)
         {
             animator.SetInteger("State", 1);
             move = true;
         }
-        if ( attack == true )
+        if (attack == true)
         {
             StartCoroutine(StopAndAttack(1.2f));
         }
 
-        if( direction == 1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
+        if (direction == 1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
         {
             animator.SetInteger("State", 1);
             enemy.velocity = Vector2.right * speed;
         }
-        else if( direction == -1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
+        else if (direction == -1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
         {
             animator.SetInteger("State", 1);
             enemy.velocity = Vector2.left * speed;
         }
 
-    }
-
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        turn = true;
-        move = false;
-
-        animator.SetInteger("State", 0);
-        enemy.velocity = Vector2.zero;
-
-        StartCoroutine(Flip(1));
     }
 
     IEnumerator StopAndAttack( float seconds ) {
@@ -94,6 +81,12 @@ public class PlatformEnemy : MonoBehaviour
 
     IEnumerator Flip( int seconds)
     {
+        Debug.Log("is in flip");
+        enemy.velocity = Vector2.zero;
+        move = false;
+
+        animator.SetInteger("State", 0);
+
         yield return new WaitForSeconds(seconds);
 
         Vector3 theScale = transform.localScale;
@@ -113,6 +106,7 @@ public class PlatformEnemy : MonoBehaviour
 
         move = true;
         turn = false;
+        isInTurn = false;
     }
 
 
