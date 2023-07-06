@@ -162,8 +162,8 @@ MonoBehaviour:
   dashForce: 13
   dashDuration: 0.25
   dashColdown: 5
-  initialJumpForce: 7.5
-  holdJumpForce: 4.5
+  initialJumpForce: 9
+  holdJumpForce: 8
   maxJumpTime: 0.15
   dropForce: 5
   shockwaveSpeed: 15
@@ -185,7 +185,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 3.5
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: b13e68cb6b5388f4fb9522224ab39fce, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
