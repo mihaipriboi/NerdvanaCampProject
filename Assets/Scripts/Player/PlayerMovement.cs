@@ -195,7 +195,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsObstacleInFront()
     {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, new Vector2(dirX, 0), 0.05f, jumpableGround).collider != null;
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size - new Vector3(0, 0.1f), 0f, new Vector2(dirX, 0), 0.05f, jumpableGround).collider != null;
     }
     private bool IsObstacleOnTop()
     {
