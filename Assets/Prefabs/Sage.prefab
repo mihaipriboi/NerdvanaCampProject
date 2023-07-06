@@ -163,9 +163,9 @@ MonoBehaviour:
   dashForce: 13
   dashDuration: 0.25
   dashColdown: 5
-  initialJumpForce: 9
-  holdJumpForce: 8
-  maxJumpTime: 0.15
+  initialJumpForce: 12
+  holdJumpForce: 18
+  maxJumpTime: 0.7
   dropForce: 5
   shockwaveSpeed: 15
   shockwaveStartDist: 3
