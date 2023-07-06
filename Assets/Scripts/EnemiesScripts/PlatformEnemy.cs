@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class PlatformEnemy : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class PlatformEnemy : MonoBehaviour
     public Rigidbody2D enemy;
     public bool attack;
     public int direction;
+    public int attackType;
+    public float attackTime;
+    public int damagePerHit;
+
+    public int enemyHealth;
 
 
     static public bool turn = false;
@@ -20,59 +26,56 @@ public class PlatformEnemy : MonoBehaviour
     private bool flipped;
     private bool move = true;
     private bool isInTurn = false;
-    private int noTurns = 0;
     void Start()
     {
         animator = GetComponent<Animator>();
         turn = false;
         move = true ;
-
-        noTurns = 0;
     }
     void Update()
     {
-        Debug.Log(turn);
-        if (turn == true && !isInTurn)
+        if (enemyHealth > 0)
         {
-            isInTurn = true;
-            Debug.Log("is turn time");
-            StartCoroutine(Flip(1));
-            noTurns++;
-            Debug.Log(noTurns);
-            //animator.SetInteger("State", 0);
-        }
 
-        if (attack == false && turn == false)
-        {
-            animator.SetInteger("State", 1);
-            move = true;
-        }
-        if (attack == true)
-        {
-            StartCoroutine(StopAndAttack(1.2f));
-        }
+            if (turn == true && !isInTurn)
+            {
+                isInTurn = true;
+                StartCoroutine(Flip(1));
+            }
 
-        if (direction == 1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
-        {
-            animator.SetInteger("State", 1);
-            enemy.velocity = Vector2.right * speed;
-        }
-        else if (direction == -1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
-        {
-            animator.SetInteger("State", 1);
-            enemy.velocity = Vector2.left * speed;
-        }
+            if (attack == false && turn == false)
+            {
+                animator.SetInteger("State", 1);
+                move = true;
+            }
+            if (attack == true)
+            {
+                if (attackType != -1)
+                {
+                    animator.SetInteger("AttackType", attackType);
+                }
+                StartCoroutine(StopAndAttack(attackTime));
+            }
 
+            if (direction == 1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
+            {
+                animator.SetInteger("State", 1);
+                enemy.velocity = Vector2.right * speed;
+            }
+            else if (direction == -1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
+            {
+                animator.SetInteger("State", 1);
+                enemy.velocity = Vector2.left * speed;
+            }
+        }
     }
 
-    IEnumerator StopAndAttack( float seconds ) {
+    IEnumerator StopAndAttack( float seconds) {
         move = false;
         enemy.velocity = Vector2.zero;
         animator.SetTrigger("Attack");
 
         yield return new WaitForSeconds(seconds);
-
-        animator.ResetTrigger("Attack");
         animator.SetInteger("State", 1);
 
         attack = false;
@@ -81,7 +84,6 @@ public class PlatformEnemy : MonoBehaviour
 
     IEnumerator Flip( int seconds)
     {
-        Debug.Log("is in flip");
         enemy.velocity = Vector2.zero;
         move = false;
 
@@ -109,5 +111,26 @@ public class PlatformEnemy : MonoBehaviour
         isInTurn = false;
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerScript>().TakeDamage(damagePerHit);
+        }
+    }
 
+    public void TakeDamage( int damage )
+    {
+        animator.SetTrigger("IsHit");
+        //Debug.Log(damage);
+        if (enemyHealth - damage > 0)
+        {
+            enemyHealth -= damage;
+        }
+        else if (enemyHealth - damage <= 0)
+        {
+            enemyHealth = -1;
+            animator.SetInteger("State", -1);
+        }
+    }
 }

@@ -14277,6 +14277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sage
       objectReference: {fileID: 0}
+    - target: {fileID: 2485931132103046629, guid: e3d13223e0360b846942f3648097ce69, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6382345283120310442, guid: e3d13223e0360b846942f3648097ce69, type: 3}
       propertyPath: m_SortingOrder
       value: 101

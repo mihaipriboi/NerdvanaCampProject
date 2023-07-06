@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LatCollider
   - enemyCollider
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX
