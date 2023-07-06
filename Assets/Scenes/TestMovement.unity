@@ -1081,7 +1081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e989191b0efe1404f9a5c9130f0c3d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 2076130572}
+  playerMovement: {fileID: 0}
 --- !u!4 &1632980469
 Transform:
   m_ObjectHideFlags: 0
@@ -1110,6 +1110,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1620300069}
+    - target: {fileID: 2317172631051364179, guid: e3d13223e0360b846942f3648097ce69, type: 3}
+      propertyPath: maxJumpTime
+      value: 24
+      objectReference: {fileID: 0}
     - target: {fileID: 2485931132103046629, guid: e3d13223e0360b846942f3648097ce69, type: 3}
       propertyPath: m_Name
       value: Sage
@@ -1350,30 +1354,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2076130572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2317172631051364179, guid: e3d13223e0360b846942f3648097ce69, type: 3}
-  m_PrefabInstance: {fileID: 348399128}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a54fa6a9ca07ef4daf97499c7273eba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpableGround:
-    serializedVersion: 2
-    m_Bits: 0
-  moveSpeed: 7
-  dashForce: 10
-  dashDuration: 0.15
-  dashColdown: 5
-  initialJumpForce: 5
-  holdJumpForce: 2
-  maxJumpTime: 0.75
-  dropForce: 1
-  shockwaveSpeed: 15
-  shockwaveStartDist: 3
-  audioSource: {fileID: 0}
-  flippedTranslate: 2.5
