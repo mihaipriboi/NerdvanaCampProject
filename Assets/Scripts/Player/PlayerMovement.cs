@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Jump on W press
-        if (Input.GetKeyDown(KeyCode.W) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.W) && ( IsGrounded() && (IsObstacleInFront() && !IsGroundedDown())))
         {
             jumpPressed = true;
         }
@@ -88,7 +88,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W) && !IsObstacleOnTop())
         {
             additionalJumpForceRequired = true;
-            Debug.Log("caca");
         }
 
         // Make on S drop
@@ -109,9 +108,11 @@ public class PlayerMovement : MonoBehaviour
         // Modified Input
         if (!isDashing)
         {
-            if (IsObstacleInFront())
+            Debug.Log(IsObstacleInFront() + "test");
+            if (IsObstacleInFront() && IsGroundedDown())
             {
-                rb.velocity = new Vector2(0, rb.velocity.y);
+                rb.velocity = new Vector2(0 , rb.velocity.y);
+                Debug.Log("WallJump");
             }
             else
             {
@@ -133,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(new Vector2(0, holdJumpForce), ForceMode2D.Force);
             }
 
-            if (IsGrounded())
+            if (IsGrounded() || (IsObstacleInFront() && !IsGroundedDown()))
             {
                 rb.velocity = new Vector3(rb.velocity.x, initialJumpForce);
                 jumpTime = Time.time + maxJumpTime;
@@ -214,7 +215,13 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround).collider != null;
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .2f, jumpableGround).collider != null;
+    }
+
+    private bool IsGroundedDown()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(coll.bounds.center, Vector2.down, coll.bounds.extents.y + 0.2f, jumpableGround);
+        return hit.collider != null;
     }
 
     private bool IsOverGround(float dist)
@@ -224,7 +231,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsObstacleInFront()
     {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size - new Vector3(0, 0.1f), 0f, new Vector2(dirX, 0), 0.05f, jumpableGround).collider != null;
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size - new Vector3(0, 0.1f), 0f, new Vector2(dirX, 0), 0.1f, jumpableGround).collider != null;
     }
     private bool IsObstacleOnTop()
     {

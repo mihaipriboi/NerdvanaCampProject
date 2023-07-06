@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Damage : MonoBehaviour
@@ -19,8 +20,9 @@ public class Damage : MonoBehaviour
         
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Player")
         {
             StartCoroutine(GiveDamage(collision.gameObject, seconds));
@@ -29,7 +31,7 @@ public class Damage : MonoBehaviour
 
     IEnumerator GiveDamage(GameObject player, float seconds)
     {
-        Debug.Log("Collision");
+        Debug.Log("Collision enemys");
         damage += damagePerHit;
         Debug.Log(damage);
         player.GetComponent<PlayerScript>().TakeDamage(damagePerHit);
