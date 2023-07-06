@@ -31,6 +31,8 @@ public class PlatformEnemy : MonoBehaviour
         animator = GetComponent<Animator>();
         turn = false;
         move = true ;
+
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), FindObjectOfType<PlayerScript>().GetComponent<Collider2D>(), false);
     }
     void Update()
     {
@@ -113,7 +115,9 @@ public class PlatformEnemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        Debug.Log($"{gameObject} collided with {collision.gameObject}", collision.gameObject);
+
+        if (collision.gameObject.tag == "Player" && collision.gameObject.tag != "PlayerWeapon")
         {
             collision.gameObject.GetComponent<PlayerScript>().TakeDamage(damagePerHit);
         }
