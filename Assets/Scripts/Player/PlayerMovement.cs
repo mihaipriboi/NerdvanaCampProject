@@ -27,11 +27,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float shockwaveStartDist = 3.0f;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private float flippedTranslate = 2.5f;
+    [SerializeField] private float wallJumpDelay = 0.5f;
 
 
     private float dirX = 0;
     private float lastDirX = 0;
     private float jumpTime;
+    private float wallJumpTime = 0;
 
     private bool isDashing;
     private float timeDash = 0;
@@ -111,11 +113,9 @@ public class PlayerMovement : MonoBehaviour
         // Modified Input
         if (!isDashing)
         {
-            Debug.Log(IsObstacleInFront() + "test");
-            if (IsObstacleInFront() && IsGroundedDown())
+            if (IsObstacleInFront())
             {
                 rb.velocity = new Vector2(0 , rb.velocity.y);
-                Debug.Log("WallJump");
             }
             else
             {
@@ -125,9 +125,19 @@ public class PlayerMovement : MonoBehaviour
 
         if (jumpPressed)
         {
-            rb.velocity = new Vector2(rb.velocity.x, initialJumpForce);
-            jumpTime = Time.time + maxJumpTime;
-            jumpPressed = false; // Reset after use
+            if(IsObstacleInFront() && !IsGroundedDown() && Time.time > wallJumpTime)
+            {
+                wallJumpTime = Time.time + wallJumpDelay;
+                rb.velocity = new Vector3(rb.velocity.x, initialJumpForce);
+                jumpTime = Time.time + maxJumpTime;
+            } 
+            
+            if (IsGrounded())
+            {
+                rb.velocity = new Vector3(rb.velocity.x, initialJumpForce);
+                jumpTime = Time.time + maxJumpTime;
+                jumpPressed = false; // Reset after use
+            }
         }
 
         if (additionalJumpForceRequired)
@@ -137,7 +147,14 @@ public class PlayerMovement : MonoBehaviour
                 rb.AddForce(new Vector2(0, holdJumpForce), ForceMode2D.Force);
             }
 
-            if (IsGrounded() || (IsObstacleInFront() && !IsGroundedDown()))
+            if (IsObstacleInFront() && !IsGroundedDown() && Time.time > wallJumpTime)
+            {
+                rb.velocity = new Vector3(rb.velocity.x, initialJumpForce);
+                jumpTime = Time.time + maxJumpTime;
+                wallJumpTime = Time.time + wallJumpDelay;
+            }
+
+            if (IsGrounded())
             {
                 rb.velocity = new Vector3(rb.velocity.x, initialJumpForce);
                 jumpTime = Time.time + maxJumpTime;

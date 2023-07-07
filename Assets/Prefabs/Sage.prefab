@@ -171,6 +171,7 @@ MonoBehaviour:
   shockwaveStartDist: 3
   audioSource: {fileID: 0}
   flippedTranslate: 2.5
+  wallJumpDelay: 1.25
 --- !u!50 &3629581472324218102
 Rigidbody2D:
   serializedVersion: 4
