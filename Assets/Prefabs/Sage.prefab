@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4768053028489615120}
   m_Layer: 0
   m_Name: Shockwave
-  m_TagString: Untagged
+  m_TagString: PlayerWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -176,6 +176,7 @@ MonoBehaviour:
   wallJumpDelay: 1.25
   soundDistance: 0.5
   fullHealth: 20
+  noHearts: 0
   damagePerHit: 10
   damage: 0
   secondsCoolDown: 0.013
