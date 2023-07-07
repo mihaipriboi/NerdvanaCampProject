@@ -276,7 +276,19 @@ namespace Pathfinding {
 		/// </summary>
 		public virtual void OnTargetReached () {
 			Debug.Log("Targed reached!");
-			StartCoroutine(StopAndAttack(attackSeconds));
+			attackRoutine = StartCoroutine(StopAndAttack(attackSeconds));
+        }
+
+		Coroutine attackRoutine;
+
+		public void Die()
+		{
+			if (attackRoutine != null)
+			{
+				StopCoroutine(attackRoutine);
+				attackRoutine = null;
+			}
+            animator.SetInteger("State", -1);
         }
 
         IEnumerator StopAndAttack(float seconds)

@@ -8,6 +8,9 @@ public class Damage : MonoBehaviour
 
     public int damagePerHit;
     public int damage;
+    [SerializeField] private float hitDelay = 1f;
+
+    private float hitTime = 0f;
 
     public float seconds;
     void Start()
@@ -23,8 +26,9 @@ public class Damage : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.tag);
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && Time.time > hitTime)
         {
+            hitTime = Time.time + hitDelay;
             StartCoroutine(GiveDamage(collision.gameObject, seconds));
         }
     }

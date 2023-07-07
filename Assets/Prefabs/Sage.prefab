@@ -143,7 +143,7 @@ Transform:
   - {fileID: 6333651740021468343}
   - {fileID: 6141597052474755057}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2317172631051364179
 MonoBehaviour:
@@ -175,7 +175,7 @@ MonoBehaviour:
   flippedTranslate: 2.5
   wallJumpDelay: 1.25
   soundDistance: 0.5
-  fullHealth: 20
+  fullHealth: 50
   noHearts: 0
   damagePerHit: 10
   damage: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751686d8370642f4aa1d352c561e06cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damagePerHit: 10
+  damagePerHit: 20
   damage: 0
   secondsCoolDown: 0.013
 --- !u!50 &3629581472324218102

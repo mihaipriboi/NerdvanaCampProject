@@ -46,16 +46,18 @@ public class HealthEnemy : MonoBehaviour
         animator.SetTrigger("IsHit");
         animator.ResetTrigger("IsNotHit");
 
-        Debug.Log(damage);
+        Debug.Log("mda"+ damage);
         enemyHealth -= damage;
         
         if (enemyHealth < 0)
         {
             enemyHealth = -1;
+            Debug.Log("mda" + damage);
+            animator.SetInteger("State", -1);
             GetComponent<AIPath>().enabled = false;
+            GetComponent<AIPath>().Die();
             GetComponent<Collider2D>().enabled = false;
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-            animator.SetInteger("State", -1);
         }
 
         yield return new WaitForSeconds(0.1f);
