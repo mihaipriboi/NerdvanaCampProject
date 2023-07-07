@@ -3,9 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace Pathfinding {
-	using Pathfinding.RVO;
 	using Pathfinding.Util;
-    using static PlasticPipe.Server.MonitorStats;
 
     /// <summary>
     /// AI for following paths.

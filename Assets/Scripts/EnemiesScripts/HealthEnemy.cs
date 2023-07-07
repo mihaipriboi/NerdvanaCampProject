@@ -1,10 +1,6 @@
 using Pathfinding;
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Windows;
 
 public class HealthEnemy : MonoBehaviour
 {
@@ -52,7 +48,7 @@ public class HealthEnemy : MonoBehaviour
         if (enemyHealth < 0)
         {
             enemyHealth = -1;
-            Debug.Log("mdaksfdhbjs" + damage);
+            Debug.Log("mda" + damage);
             animator.SetInteger("State", -1);
             GetComponent<AIPath>().enabled = false;
             GetComponent<AIPath>().Die();
