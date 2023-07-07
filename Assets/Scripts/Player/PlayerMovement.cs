@@ -347,8 +347,9 @@ public class PlayerMovement : MonoBehaviour
             health = fullHealth;
         }
         if (noHearts > 0) anim.SetInteger("State", 0);
-        if (noHearts == 0 || health < 0) { 
+        if (noHearts <= 0 || health <= 0) { 
             health = -1;
+            Debug.Log("CACA");
             anim.SetInteger("State", 5);
         }
     }
