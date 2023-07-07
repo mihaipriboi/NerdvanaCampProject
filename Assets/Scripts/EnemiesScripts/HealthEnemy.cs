@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -35,16 +36,29 @@ public class HealthEnemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        Debug.Log("Is hit");
+        StartCoroutine(HitState(damage));
+        
+    }
+
+    IEnumerator HitState(int damage)
+    {
         animator.SetTrigger("IsHit");
-        //Debug.Log(damage);
-        if (enemyHealth - damage > 0)
-        {
-            enemyHealth -= damage;
-        }
-        else if (enemyHealth - damage <= 0)
+        animator.ResetTrigger("IsNotHit");
+
+        Debug.Log(damage);
+        enemyHealth -= damage;
+        
+        if (enemyHealth < 0)
         {
             enemyHealth = -1;
+            GetComponent<AIPath>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
             animator.SetInteger("State", -1);
         }
+
+        yield return new WaitForSeconds(0.1f);
+
+        animator.SetTrigger("IsNotHit");
     }
 }

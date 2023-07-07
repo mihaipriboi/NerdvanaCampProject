@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log($"{gameObject} collided with {collision.gameObject}");
-        if (collision.gameObject.tag == "enemyCollider")
+        if (collision.gameObject.tag == "enemyCollider" || collision.gameObject.tag == "enemyWeapon")
         {
             StartCoroutine(GiveDamage(collision.gameObject, secondsCoolDown));
         }
@@ -33,7 +33,7 @@ public class PlayerAttack : MonoBehaviour
         //Debug.Log("Collision");
         damage += damagePerHit;
         //Debug.Log(damage);
-        enemy.GetComponent<PlatformEnemy>().TakeDamage(damagePerHit);
+        enemy.GetComponent<HealthEnemy>().TakeDamage(damagePerHit);
         damage = 0;
         yield return new WaitForSeconds(seconds);
     }
