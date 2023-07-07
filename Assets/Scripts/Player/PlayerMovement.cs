@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
 
     private int health;
     public int fullHealth;
-    private int noHearts;
+    public int noHearts;
     static public bool isDamaged;
 
     public int damagePerHit;
