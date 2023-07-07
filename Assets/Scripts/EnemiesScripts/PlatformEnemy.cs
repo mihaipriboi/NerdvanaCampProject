@@ -12,7 +12,7 @@ public class PlatformEnemy : MonoBehaviour
     public float flippedTranslate;
     public Animator animator;
     public Rigidbody2D enemy;
-    public bool attack;
+    static public bool attack;
     public int direction;
     public int attackType;
     public float attackTime;
@@ -38,18 +38,6 @@ public class PlatformEnemy : MonoBehaviour
     {
         if (enemyHealth > 0)
         {
-
-            if (turn == true && !isInTurn)
-            {
-                isInTurn = true;
-                StartCoroutine(Flip(1));
-            }
-
-            if (attack == false && turn == false)
-            {
-                animator.SetInteger("State", 1);
-                move = true;
-            }
             if (attack == true)
             {
                 if (attackType != -1)
@@ -57,17 +45,6 @@ public class PlatformEnemy : MonoBehaviour
                     animator.SetInteger("AttackType", attackType);
                 }
                 StartCoroutine(StopAndAttack(attackTime));
-            }
-
-            if (direction == 1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
-            {
-                animator.SetInteger("State", 1);
-                enemy.velocity = Vector2.right * speed;
-            }
-            else if (direction == -1 && enemy.velocity == Vector2.zero && move && !attack && !turn)
-            {
-                animator.SetInteger("State", 1);
-                enemy.velocity = Vector2.left * speed;
             }
         }
     }
