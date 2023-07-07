@@ -137,7 +137,7 @@ public class EnemyMovement : MonoBehaviour
     }
     private void UpdatePath()
     {
-        if (followEnabled && TargetInDistance() && seeker.IsDone())
+        if (followEnabled && TargetInDistance())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
