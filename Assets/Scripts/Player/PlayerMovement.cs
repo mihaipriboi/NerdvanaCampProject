@@ -76,6 +76,12 @@ public class PlayerMovement : MonoBehaviour
             else
                 dirX = 0;
 
+            if (!isDashing && Time.time > timeDash)
+            {
+
+                GameObject.Find("GameManager").GetComponent<GameManager>().DashReady();
+            }
+
             // Dash on Shift press
             if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && Time.time > timeDash)
             {
@@ -191,6 +197,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        GameObject.Find("GameManager").GetComponent<GameManager>().UseDash();
         isDashing = true;
         rb.AddForce(new Vector2(lastDirX * dashForce, 0), ForceMode2D.Impulse);
         yield return new WaitForSeconds(dashDuration);
