@@ -35,14 +35,14 @@ public class PlayerScript : MonoBehaviour
 
     public void TakeDamage( int damage )
     {
-        Debug.Log("pula");
+        //Debug.Log("pula");
         animator.SetInteger("State", 4);
         //Debug.Log(damage);
         if (health - damage > 0)
         {
             health -= damage;
         }
-        else if(noHearts >= 0)
+        if(noHearts >= 0 && health <= 0)
         {
             noHearts--;
         }
