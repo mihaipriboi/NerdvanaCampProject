@@ -104,6 +104,12 @@ public class GameManager : MonoBehaviour
     public void Die()
     {
         lives--;
+
+        if (lives == 0)
+        {
+            ResetGame();
+        }
+
         HeartNo.text = "x " + lives;
         fullHearts[lives].SetActive(false);
         emptyHearts[lives].SetActive(true);
