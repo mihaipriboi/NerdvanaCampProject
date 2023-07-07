@@ -108,7 +108,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: attack 2 with VFX_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 76
+        width: 91
+        height: 19
+      alignment: 9
+      pivot: {x: 0.1718306, y: 0.4738095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc50577a1caa9e4cad60c409dea329e
+      internalID: -2074242280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack 2 with VFX_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 57
+        width: 91
+        height: 19
+      alignment: 9
+      pivot: {x: 0.1718306, y: 0.4738095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6bd99c951d6d1b4bbf401d378c765ae
+      internalID: 3951633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack 2 with VFX_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 38
+        width: 91
+        height: 19
+      alignment: 9
+      pivot: {x: 0.1718306, y: 0.4738095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d9b3db2001c9445b2d409fff98ade4
+      internalID: 412188525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack 2 with VFX_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 19
+        width: 91
+        height: 19
+      alignment: 9
+      pivot: {x: 0.1718306, y: 0.4738095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1aac4fbf5409044f9c389955503c00c
+      internalID: 1232492776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack 2 with VFX_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 91
+        height: 19
+      alignment: 9
+      pivot: {x: 0.1718306, y: 0.4738095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41c23aed5f305b4480318feb7732a25
+      internalID: -555514160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +224,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      attack 2 with VFX_0: -2074242280
+      attack 2 with VFX_1: 3951633
+      attack 2 with VFX_2: 412188525
+      attack 2 with VFX_3: 1232492776
+      attack 2 with VFX_4: -555514160
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
