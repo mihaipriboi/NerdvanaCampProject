@@ -60,6 +60,7 @@ public class GameManager : MonoBehaviour
     public void Die()
     {
         lives--;
+        Debug.Log(lives);
         hearts[lives].GetComponent<SpriteRenderer>().sprite = emptyHeart;
     }
 }
