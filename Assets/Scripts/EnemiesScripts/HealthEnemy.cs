@@ -17,7 +17,7 @@ public class HealthEnemy : MonoBehaviour
     {
         animator = GetComponent<Animator>();
 
-        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), FindObjectOfType<PlayerScript>().GetComponent<Collider2D>(), false);
+        Physics2D.IgnoreCollision(GetComponent<Collider2D>(), FindObjectOfType<HealthEnemy>().GetComponent<Collider2D>(), false);
     }
     void Update()
     {
@@ -54,6 +54,7 @@ public class HealthEnemy : MonoBehaviour
             enemyHealth = -1;
             GetComponent<AIPath>().enabled = false;
             GetComponent<Collider2D>().enabled = false;
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             animator.SetInteger("State", -1);
         }
 
