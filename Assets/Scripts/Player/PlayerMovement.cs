@@ -26,8 +26,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float shockwaveSpeed = 15.0f;
     [SerializeField] private float shockwaveStartDist = 3.0f;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource2;
     [SerializeField] private float flippedTranslate = 2.5f;
     [SerializeField] private float wallJumpDelay = 0.5f;
+    [SerializeField] private float soundDistance = 0.5f;
+
 
 
     private float dirX = 0;
@@ -37,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isDashing;
     private float timeDash = 0;
+    private bool soundPlayed = false;
 
     private bool isDropping = false;
     private bool isFlipped = false;
@@ -185,14 +189,21 @@ public class PlayerMovement : MonoBehaviour
         if (dropPressed)
         {
             isDropping = true;
-            //audioSource.Play();
+            soundPlayed = false;
             rb.AddForce(new Vector2(0, -dropForce), ForceMode2D.Impulse);
             dropPressed = false; // Reset after use
         }
 
+        if (isDropping && soundStarter() && Math.Abs(rb.velocity.y) >= shockwaveSpeed) // verify velocity later
+        {
+            
+        }
+
         if ((isDropping && IsOverGround(shockwaveStartDist)) && Math.Abs(rb.velocity.y) >= shockwaveSpeed)
         {
-            //OnShockwave?.Invoke(10, 0.5f);
+            audioSource.Play();
+            soundPlayed = true;
+            OnShockwave?.Invoke(5, 0.3f);
             anim.SetTrigger("Down");
             shockAnimator.SetTrigger("Shock");
             Debug.Log("Shockwave!");
@@ -201,7 +212,6 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             anim.ResetTrigger("Down");
-    
             shockAnimator.ResetTrigger("Shock");
         }
     }
@@ -210,6 +220,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Dash()
     {
         isDashing = true;
+        audioSource2.Play();
         rb.AddForce(new Vector2(lastDirX * dashForce, 0), ForceMode2D.Impulse);
         yield return new WaitForSeconds(dashDuration);
         isDashing = false;
@@ -253,7 +264,20 @@ public class PlayerMovement : MonoBehaviour
     }
     private bool IsGrounded()
     {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .2f, jumpableGround).collider != null;
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .4f, jumpableGround).collider != null;
+    }
+
+    private bool soundStarter()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
+
+        if (hit.collider != null) 
+        {
+            float distance = hit.distance;
+            if(distance <= soundDistance)
+                return true; 
+        }
+        return false; 
     }
 
     private bool IsGroundedDown()
