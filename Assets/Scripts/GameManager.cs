@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     private int score;
     private int lives;
+    private float startTime;
 
     void Start()
     {
@@ -54,7 +55,7 @@ public class GameManager : MonoBehaviour
             emptyHearts[i].SetActive(false);
         }
 
-
+        startTime = Time.time;
         ResetScore();
     }
 
@@ -73,6 +74,10 @@ public class GameManager : MonoBehaviour
             else
                 StartGame();
         }
+
+        int sec = Mathf.RoundToInt((Time.time - startTime) % 60);
+        int min = Mathf.RoundToInt((Time.time - startTime) / 60);
+        ScoreText.text = (min < 10 ? "0" : "") + min.ToString() + ":" + (sec < 10 ? "0" : "") + sec.ToString();
     }
 
     public void StartGame()
