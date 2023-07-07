@@ -113,11 +113,7 @@ public class PlayerMovement : MonoBehaviour
             else
                 dirX = 0;
 
-            if (!isDashing && Time.time > timeDash)
-            {
-
-                GameObject.Find("GameManager").GetComponent<GameManager>().DashReady();
-            }
+            GameObject.Find("GameManager").GetComponent<GameManager>().SetDash(Mathf.Clamp01((timeDash - Time.time) / dashColdown));
 
             // Dash on Shift press
             if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && Time.time > timeDash)
@@ -248,7 +244,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        GameObject.Find("GameManager").GetComponent<GameManager>().UseDash();
+        GameObject.Find("GameManager").GetComponent<GameManager>().SetDash(0);
         isDashing = true;
         audioSource2.Play();
         rb.AddForce(new Vector2(lastDirX * dashForce, 0), ForceMode2D.Impulse);

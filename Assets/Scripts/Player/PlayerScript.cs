@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-
+    [SerializeField] private int maxHealth;
     public int health;
     private int noHearts;
     static public bool isDamaged;
@@ -21,6 +21,7 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         noHearts = 3;
+        health = maxHealth;
         isDamaged = false;
     }
 
@@ -33,9 +34,8 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    public void TakeDamage( int damage )
+    public void TakeDamage(int damage)
     {
-        //Debug.Log("pula");
         animator.SetInteger("State", 4);
         //Debug.Log(damage);
         if (health - damage > 0)
@@ -45,8 +45,17 @@ public class PlayerScript : MonoBehaviour
         if(noHearts >= 0 && health <= 0)
         {
             noHearts--;
+            health = maxHealth;
+            GameObject.Find("GameManager").GetComponent<GameManager>().Die();
         }
         animator.SetInteger("State", 0);
+    }
+
+    public void LoseLife()
+    {
+        noHearts--;
+        health = maxHealth;
+        GameObject.Find("GameManager").GetComponent<GameManager>().Die();
     }
 
     IEnumerator StopAndAttack(float seconds)

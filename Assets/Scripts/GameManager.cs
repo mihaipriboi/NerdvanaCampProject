@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,8 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject[] fullHearts;
     [SerializeField] GameObject[] emptyHearts;
 
-    [SerializeField] GameObject dashReady;
-    [SerializeField] GameObject dashNotReady;
+    [SerializeField] Image dash;
 
     [SerializeField] TMP_Text ScoreText;
 
@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
 
     public bool loseLife;
     public bool useDash;
-    public bool dashRdy;
 
     private int score;
     private int lives;
@@ -55,8 +54,6 @@ public class GameManager : MonoBehaviour
             emptyHearts[i].SetActive(false);
         }
 
-        dashReady.SetActive(true);
-        dashNotReady.SetActive(false);
 
         ResetScore();
     }
@@ -67,17 +64,6 @@ public class GameManager : MonoBehaviour
         {
             loseLife = false;
             Die();
-        }
-
-        if (useDash)
-        {
-            useDash = false;
-            UseDash();
-        }
-        if (dashRdy)
-        {
-            dashRdy = false;
-            DashReady();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
@@ -118,6 +104,12 @@ public class GameManager : MonoBehaviour
     public void Die()
     {
         lives--;
+
+        if (lives == 0)
+        {
+            ResetGame();
+        }
+
         HeartNo.text = "x " + lives;
         fullHearts[lives].SetActive(false);
         emptyHearts[lives].SetActive(true);
@@ -125,13 +117,7 @@ public class GameManager : MonoBehaviour
 
     public void UseDash()
     {
-        dashReady.SetActive(false);
-        dashNotReady.SetActive(true);
-    }
-    public void DashReady()
-    {
-        dashReady.SetActive(true);
-        dashNotReady.SetActive(false);
+        SetDash(1);
     }
 
     public void AddScore(int sc)
@@ -154,5 +140,10 @@ public class GameManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void SetDash(float proc)
+    {
+        dash.fillAmount = 1 - Mathf.Clamp01(proc);
     }
 }
