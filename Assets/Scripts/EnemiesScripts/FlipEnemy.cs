@@ -16,7 +16,7 @@ public class FlipEnemy : MonoBehaviour
     void Update()
     {
         Vector3 vel = enemy.velocity;
-        Debug.Log(enemy.velocity.x);
+        //Debug.Log(enemy.velocity.x);
         if (enemy.velocity.x < 0)
         {
         }

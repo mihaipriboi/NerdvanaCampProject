@@ -115,7 +115,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9043397791964375690}
-  - component: {fileID: 572058776170755843}
   - component: {fileID: 2317172631051364179}
   - component: {fileID: 5163499864218234270}
   - component: {fileID: 3629581472324218102}
@@ -146,24 +145,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &572058776170755843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2485931132103046629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dd084f0c742dd145813719b679518c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  animator: {fileID: 5961322237401214578}
-  damagePerHit: 10
-  damage: 0
-  secondsCoolDown: 0.013
-  secondsAttackAnimation: 0.013
 --- !u!114 &2317172631051364179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,8 +171,15 @@ MonoBehaviour:
   shockwaveSpeed: 15
   shockwaveStartDist: 3
   audioSource: {fileID: 0}
+  audioSource2: {fileID: 0}
   flippedTranslate: 2.5
   wallJumpDelay: 1.25
+  soundDistance: 0.5
+  fullHealth: 20
+  damagePerHit: 10
+  damage: 0
+  secondsCoolDown: 0.013
+  secondsAttackAnimation: 0.013
 --- !u!114 &5163499864218234270
 MonoBehaviour:
   m_ObjectHideFlags: 0

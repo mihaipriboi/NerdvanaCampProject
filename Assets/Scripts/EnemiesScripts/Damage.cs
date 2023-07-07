@@ -34,7 +34,7 @@ public class Damage : MonoBehaviour
         Debug.Log("Collision enemys");
         damage += damagePerHit;
         Debug.Log(damage);
-        player.GetComponent<PlayerScript>().TakeDamage(damagePerHit);
+        player.GetComponent<PlayerMovement>().TakeDamage(damagePerHit);
         damage = 0;
         yield return new WaitForSeconds(seconds);
     }

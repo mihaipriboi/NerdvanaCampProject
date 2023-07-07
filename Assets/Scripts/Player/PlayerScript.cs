@@ -42,7 +42,7 @@ public class PlayerScript : MonoBehaviour
         {
             health -= damage;
         }
-        else if(noHearts >= 0)
+        if(noHearts >= 0 && health <= 0)
         {
             noHearts--;
         }
