@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Death : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("death Tile");
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerMovement>().noHearts = -1;
+            //collision.gameObject.GetComponent<PlayerMovement>().TakeDamage(200);
+        }
     }
 }

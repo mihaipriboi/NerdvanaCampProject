@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 8411412317293667468}
   - component: {fileID: 4024720055717605478}
   - component: {fileID: 4561092686147665879}
+  - component: {fileID: 7092593668920674018}
   m_Layer: 3
   m_Name: FallingTile
   m_TagString: Untagged
@@ -445,3 +446,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.980834, y: 0.7955998}
   m_EdgeRadius: 0
+--- !u!114 &7092593668920674018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7729689247775718452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60b981f62663f8f48b9bf3f3065e916b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
