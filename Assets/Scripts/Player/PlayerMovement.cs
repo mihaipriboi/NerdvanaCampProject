@@ -58,49 +58,52 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        // Get inputs
-        if (Input.GetKey(KeyCode.A))
+        if (!GameObject.Find("GameManager").GetComponent<GameManager>().gamePaused)
         {
-            dirX = -1;
-            lastDirX = dirX;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            dirX = 1;
-            lastDirX = dirX;
-        }
-        else
-            dirX = 0;
+            // Get inputs
+            if (Input.GetKey(KeyCode.A))
+            {
+                dirX = -1;
+                lastDirX = dirX;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                dirX = 1;
+                lastDirX = dirX;
+            }
+            else
+                dirX = 0;
 
-        // Dash on Shift press
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && Time.time > timeDash)
-        {
-            StartCoroutine(Dash());
-        }
+            // Dash on Shift press
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && Time.time > timeDash)
+            {
+                StartCoroutine(Dash());
+            }
 
-        // Jump on W press
-        if (Input.GetKeyDown(KeyCode.W) && ( IsGrounded() && (IsObstacleInFront() && !IsGroundedDown())))
-        {
-            jumpPressed = true;
-        }
+            // Jump on W press
+            if (Input.GetKeyDown(KeyCode.W) && (IsGrounded() && (IsObstacleInFront() && !IsGroundedDown())))
+            {
+                jumpPressed = true;
+            }
 
-        // Apply additional force if W is held
-        if (Input.GetKey(KeyCode.W) && !IsObstacleOnTop())
-        {
-            additionalJumpForceRequired = true;
-        }
+            // Apply additional force if W is held
+            if (Input.GetKey(KeyCode.W) && !IsObstacleOnTop())
+            {
+                additionalJumpForceRequired = true;
+            }
 
-        // Make on S drop
-        if (Input.GetKeyDown(KeyCode.S) && !IsOverGround(shockwaveStartDist))
-        {
-            dropPressed = true;
-        }
-        else if (!Input.GetKey(KeyCode.S) && isDropping)
-        {
-            isDropping = false;
-        }
+            // Make on S drop
+            if (Input.GetKeyDown(KeyCode.S) && !IsOverGround(shockwaveStartDist))
+            {
+                dropPressed = true;
+            }
+            else if (!Input.GetKey(KeyCode.S) && isDropping)
+            {
+                isDropping = false;
+            }
 
-        UpdateAnimationState();
+            UpdateAnimationState();
+        }
     }
 
     private void FixedUpdate()
