@@ -283,6 +283,7 @@ namespace Pathfinding {
 
 		public void Die()
 		{
+			Debug.Log("Die");
 			if (attackRoutine != null)
 			{
 				StopCoroutine(attackRoutine);
@@ -375,86 +376,97 @@ namespace Pathfinding {
 
 		/// <summary>Called during either Update or FixedUpdate depending on if rigidbodies are used for movement or not</summary>
 		protected override void MovementUpdateInternal (float deltaTime, out Vector3 nextPosition, out Quaternion nextRotation) {
-			float currentAcceleration = maxAcceleration;
+			//if (Mathf.Abs(nextPosition.x - startPos.x) > maxDist)
+			//{
+				float currentAcceleration = maxAcceleration;
 
-			animator.SetInteger("State", 1);
+				animator.SetInteger("State", 1);
 
-			//Debug.Log("ajs" + velocity2D);
+				//Debug.Log("ajs" + velocity2D);
 
-            // If negative, calculate the acceleration from the max speed
-            if (velocity2D.x < 0 && isFlliped == false ) {
+				// If negative, calculate the acceleration from the max speed
+				if (velocity2D.x < 0 && isFlliped == false)
+				{
 
-                Vector3 theScale = transform.localScale;
-                theScale.x *= -1;
-                transform.localScale = theScale;
+					Vector3 theScale = transform.localScale;
+					theScale.x *= -1;
+					transform.localScale = theScale;
 
-                isFlliped = true;
-			}
-            else if (isFlliped == true && velocity2D.x > 0)
-            {
-                Vector3 theScale = transform.localScale;
-                theScale.x *= -1;
-                transform.localScale = theScale;
+					isFlliped = true;
+				}
+				else if (isFlliped == true && velocity2D.x > 0)
+				{
+					Vector3 theScale = transform.localScale;
+					theScale.x *= -1;
+					transform.localScale = theScale;
 
-                isFlliped = false;
-            }
+					isFlliped = false;
+				}
 
-            if (currentAcceleration < 0) currentAcceleration *= -maxSpeed;
+				if (currentAcceleration < 0) currentAcceleration *= -maxSpeed;
 
-            if (updatePosition) {
-				// Get our current position. We read from transform.position as few times as possible as it is relatively slow
-				// (at least compared to a local variable)
-				simulatedPosition = tr.position;
-			}
-			if (updateRotation) simulatedRotation = tr.rotation;
+				if (updatePosition)
+				{
+					// Get our current position. We read from transform.position as few times as possible as it is relatively slow
+					// (at least compared to a local variable)
+					simulatedPosition = tr.position;
+				}
+				if (updateRotation) simulatedRotation = tr.rotation;
 
-			var currentPosition = simulatedPosition;
+				var currentPosition = simulatedPosition;
 
-			// Update which point we are moving towards
-			interpolator.MoveToCircleIntersection2D(currentPosition, pickNextWaypointDist, movementPlane);
-			var dir = movementPlane.ToPlane(steeringTarget - currentPosition);
+				// Update which point we are moving towards
+				interpolator.MoveToCircleIntersection2D(currentPosition, pickNextWaypointDist, movementPlane);
+				var dir = movementPlane.ToPlane(steeringTarget - currentPosition);
 
-			// Calculate the distance to the end of the path
-			float distanceToEnd = dir.magnitude + Mathf.Max(0, interpolator.remainingDistance);
+				// Calculate the distance to the end of the path
+				float distanceToEnd = dir.magnitude + Mathf.Max(0, interpolator.remainingDistance);
 
-			// Check if we have reached the target
-			var prevTargetReached = reachedEndOfPath;
-			reachedEndOfPath = distanceToEnd <= endReachedDistance && interpolator.valid;
-			if (!prevTargetReached && reachedEndOfPath) OnTargetReached();
-			float slowdown;
+				// Check if we have reached the target
+				var prevTargetReached = reachedEndOfPath;
+				reachedEndOfPath = distanceToEnd <= endReachedDistance && interpolator.valid;
+				if (!prevTargetReached && reachedEndOfPath) OnTargetReached();
+				float slowdown;
 
-			// Normalized direction of where the agent is looking
-			var forwards = movementPlane.ToPlane(simulatedRotation * (orientation == OrientationMode.YAxisForward ? Vector3.up : Vector3.forward));
+				// Normalized direction of where the agent is looking
+				var forwards = movementPlane.ToPlane(simulatedRotation * (orientation == OrientationMode.YAxisForward ? Vector3.up : Vector3.forward));
 
-			// Check if we have a valid path to follow and some other script has not stopped the character
-			bool stopped = isStopped || (reachedDestination && whenCloseToDestination == CloseToDestinationMode.Stop);
-			if (interpolator.valid && !stopped) {
-				// How fast to move depending on the distance to the destination.
-				// Move slower as the character gets closer to the destination.
-				// This is always a value between 0 and 1.
-				slowdown = distanceToEnd < slowdownDistance? Mathf.Sqrt(distanceToEnd / slowdownDistance) : 1;
+				// Check if we have a valid path to follow and some other script has not stopped the character
+				bool stopped = isStopped || (reachedDestination && whenCloseToDestination == CloseToDestinationMode.Stop);
+				if (interpolator.valid && !stopped)
+				{
+					// How fast to move depending on the distance to the destination.
+					// Move slower as the character gets closer to the destination.
+					// This is always a value between 0 and 1.
+					slowdown = distanceToEnd < slowdownDistance ? Mathf.Sqrt(distanceToEnd / slowdownDistance) : 1;
 
-				if (reachedEndOfPath && whenCloseToDestination == CloseToDestinationMode.Stop) {
+					if (reachedEndOfPath && whenCloseToDestination == CloseToDestinationMode.Stop)
+					{
+						// Slow down as quickly as possible
+						velocity2D -= Vector2.ClampMagnitude(velocity2D, currentAcceleration * deltaTime);
+					}
+					else
+					{
+						velocity2D += MovementUtilities.CalculateAccelerationToReachPoint(dir, dir.normalized * maxSpeed, velocity2D, currentAcceleration, rotationSpeed, maxSpeed, forwards) * deltaTime;
+					}
+				}
+				else
+				{
+					slowdown = 1;
 					// Slow down as quickly as possible
 					velocity2D -= Vector2.ClampMagnitude(velocity2D, currentAcceleration * deltaTime);
-				} else {
-					velocity2D += MovementUtilities.CalculateAccelerationToReachPoint(dir, dir.normalized*maxSpeed, velocity2D, currentAcceleration, rotationSpeed, maxSpeed, forwards) * deltaTime;
 				}
-			} else {
-				slowdown = 1;
-				// Slow down as quickly as possible
-				velocity2D -= Vector2.ClampMagnitude(velocity2D, currentAcceleration * deltaTime);
-			}
 
-			velocity2D = MovementUtilities.ClampVelocity(velocity2D, maxSpeed, slowdown, slowWhenNotFacingTarget && enableRotation, forwards);
+				velocity2D = MovementUtilities.ClampVelocity(velocity2D, maxSpeed, slowdown, slowWhenNotFacingTarget && enableRotation, forwards);
 
-			ApplyGravity(deltaTime);
+				ApplyGravity(deltaTime);
 
 
-			// Set how much the agent wants to move during this frame
-			var delta2D = lastDeltaPosition = CalculateDeltaToMoveThisFrame(movementPlane.ToPlane(currentPosition), distanceToEnd, deltaTime);
-			nextPosition = currentPosition + movementPlane.ToWorld(delta2D, verticalVelocity * lastDeltaTime);
-			CalculateNextRotation(slowdown, out nextRotation);
+				// Set how much the agent wants to move during this frame
+				var delta2D = lastDeltaPosition = CalculateDeltaToMoveThisFrame(movementPlane.ToPlane(currentPosition), distanceToEnd, deltaTime);
+				nextPosition = currentPosition + movementPlane.ToWorld(delta2D, verticalVelocity * lastDeltaTime);
+				CalculateNextRotation(slowdown, out nextRotation);
+			//}
 		}
 
 		protected virtual void CalculateNextRotation (float slowdown, out Quaternion nextRotation) {

@@ -52,7 +52,7 @@ public class HealthEnemy : MonoBehaviour
         if (enemyHealth < 0)
         {
             enemyHealth = -1;
-            Debug.Log("mda" + damage);
+            Debug.Log("mdaksfdhbjs" + damage);
             animator.SetInteger("State", -1);
             GetComponent<AIPath>().enabled = false;
             GetComponent<AIPath>().Die();
