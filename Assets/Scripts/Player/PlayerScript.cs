@@ -35,7 +35,7 @@ public class PlayerScript : MonoBehaviour
 
     public void TakeDamage( int damage )
     {
-        Debug.Log("pula");
+        //Debug.Log("pula");
         animator.SetInteger("State", 4);
         //Debug.Log(damage);
         if (health - damage > 0)
