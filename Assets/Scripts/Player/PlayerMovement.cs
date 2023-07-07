@@ -71,11 +71,29 @@ public class PlayerMovement : MonoBehaviour
             {
                 dirX = -1;
                 lastDirX = dirX;
+
+                if (isFlipped == false)
+                {
+                    Vector3 theScale = transform.localScale;
+                    theScale.x *= -1;
+                    transform.localScale = theScale;
+
+                    isFlipped = true;
+                }
             }
             else if (Input.GetKey(KeyCode.D))
             {
                 dirX = 1;
                 lastDirX = dirX;
+
+                if( isFlipped == true )
+                {
+                    Vector3 theScale = transform.localScale;
+                    theScale.x *= -1;
+                    transform.localScale = theScale;
+
+                    isFlipped = false;
+                }
             }
             else
                 dirX = 0;
@@ -216,12 +234,12 @@ public class PlayerMovement : MonoBehaviour
         if (dirX > 0f)
         {
             state = MovementState.running;
-            sprite.flipX = false;
+            //sprite.flipX = false;
         }
         else if (dirX < 0f)
         {
             state = MovementState.running;
-            sprite.flipX = true;
+            //sprite.flipX = true;
         }
         else
         {
